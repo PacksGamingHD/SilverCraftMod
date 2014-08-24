@@ -12,7 +12,7 @@ public class Command_vote extends TFM_Command
 public boolean run(final CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
 {
     TFM_Util.bcastMsg("****" + ChatColor.GOLD + "Voting Links" + ChatColor.DARK_GREEN + "****", ChatColor.DARK_GREEN);
-    TFM_Util.bcastMsg("http://minecraft-mp.com/server-s56156", ChatColor.AQUA);
+    TFM_Util.bcastMsg("silvercraftvote1.tk", ChatColor.AQUA);
     TFM_Util.bcastMsg("****" + ChatColor.GOLD + "Voting Links" + ChatColor.DARK_GREEN + "****", ChatColor.DARK_GREEN);
     player.chat("I just voted! (/vote)");
 return true;
