@@ -14,6 +14,7 @@ public boolean run(final CommandSender sender, Player sender_p, Command cmd, Str
     TFM_Util.bcastMsg("****" + ChatColor.GOLD + "Voting Links" + ChatColor.DARK_GREEN + "****", ChatColor.DARK_GREEN);
     TFM_Util.bcastMsg("http://minecraft-mp.com/server-s56156", ChatColor.AQUA);
     TFM_Util.bcastMsg("****" + ChatColor.GOLD + "Voting Links" + ChatColor.DARK_GREEN + "****", ChatColor.DARK_GREEN);
+    player.chat("I just voted! (/vote)");
 return true;
 }
 }
