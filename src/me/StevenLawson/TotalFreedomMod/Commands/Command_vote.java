@@ -1,25 +1,19 @@
 package me.StevenLawson.TotalFreedomMod.Commands;
- 
- 
 import me.StevenLawson.TotalFreedomMod.TFM_Util;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
- 
 @CommandPermissions(level = AdminLevel.SENIOR, source = SourceType.BOTH)
-@CommandParameters(description = "How to vote", usage = "/<command>")
-public class Command_givecows extends TFM_Command
+@CommandParameters(description = "Shows users the voting links", usage = "/<command>", aliases = "voting")
+public class Command_vote extends TFM_Command
 {
-   @Override
-   public boolean run(final CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
-   {
-           server.dispatchCommand(sender, "ping &2****&6Links to vote&2****");
-           server.dispatchCommand(sender, "ping &b1)  &2http://minecraft-mp.com/server-s56156");
-           server.dispatchCommand(sender, "ping &2****&6Links to vote&2****");
-           player.chat("I just saw the vote links by using /vote, you should do it aswell!");
-           
-           return true;
-    }
+@Override
+public boolean run(final CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
+{
+    TFM_Util.bcastMsg("****" + ChatColor.GOLD + "Voting Links" + ChatColor.DARK_GREEN + "****", ChatColor.DARK_GREEN);
+    TFM_Util.bcastMsg("http://minecraft-mp.com/server-s56156", ChatColor.AQUA);
+    TFM_Util.bcastMsg("****" + ChatColor.GOLD + "Voting Links" + ChatColor.DARK_GREEN + "****", ChatColor.DARK_GREEN);
+return true;
 }
- 
+}
