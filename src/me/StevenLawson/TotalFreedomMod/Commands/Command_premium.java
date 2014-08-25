@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 @CommandPermissions(level = AdminLevel.SUPER, source = SourceType.BOTH)
-@CommandParameters(description = "Validates if a given account is premium.", usage = "/<command> <player>", aliases = "prem")
+@CommandParameters(description = "Validates if a given username is premium.", usage = "/<command> <player>", aliases = "prem","hasregistered","hasreg")
 public class Command_premium extends TFM_Command
 {
     @Override
@@ -54,7 +54,7 @@ public class Command_premium extends TFM_Command
                         @Override
                         public void run()
                         {
-                            playerMsg("Player " + name + " is premium: " + message);
+                            playerMsg("Username '" + name + "' has registered: " + message);
                         }
                     }.runTask(plugin);
 
